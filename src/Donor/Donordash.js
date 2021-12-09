@@ -4,7 +4,8 @@ import {
     Switch,
     Route,
     useRouteMatch,
-    Link
+    Link,
+    Redirect
 } from "react-router-dom";
 import Navbar from "./Navbar";
 import Event from "./Event";
@@ -52,11 +53,7 @@ const DonorDash = () => {
                 <Navbar url={path} />
                 <Switch>
                     <Route exact path={"/donor"}>
-                        <h2>WELCOME TO CHARITY BOX</h2>
-                        <div>
-                            <h2>Hello, {name}</h2>
-                            <h2>{email}</h2>
-                        </div>
+                        <Redirect to={`${path}/Event`} />
                     </Route>
                     <Route path={`${path}/Event`}>
                         <Event />
