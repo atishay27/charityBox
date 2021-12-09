@@ -4,12 +4,13 @@ import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { projectFirestore } from './firebase';
-import Volunteer from './VolNgo/volunteer';
+
 //import "./ngovol.css"
 import { Router } from '@material-ui/icons';
 import Home from './Home';
 import { Link,Route,Switch} from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import './App.css';
 const VOLRegistraion = () => {
     const [name, setName] = useState("");
     const [contact, setContact] = useState("");
@@ -105,7 +106,6 @@ const VOLRegistraion = () => {
         <div>
 
             <Header />
-            <Volunteer />
             <ToastContainer
                 position="top-center"
                 autoClose={3000}
@@ -150,17 +150,12 @@ const VOLRegistraion = () => {
                         <small><i>Required Fields</i></small>
                        
                         </div>
-                        <Button  variant="outline-success" as={Link} to={"/home"}>BACK TO LOGIN PAGE</Button>
+                        <Button  variant="outline-success" as={Link} to={"/"}>BACK TO LOGIN PAGE</Button>
                         </form>
                         </div>
                         <div className="col-2" />
                     </div>
                 </div>
-                <Switch>
-            <Route path="/home">
-                <Home />
-              </Route>
-              </Switch>
             </div>
         
             )

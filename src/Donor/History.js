@@ -32,7 +32,7 @@ const History=()=>{
                 <div className="col-9">
                 <Switch>
                      <Route exact path={path}>
-                        <Redirect to={`${path}/Pending`} />
+                        <Redirect to={`${path}/Verified`} />
                     </Route>
                     <Route path={`${path}/Pending`}>
                         <Pending />

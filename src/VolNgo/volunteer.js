@@ -22,12 +22,14 @@ import {
   Link
 } from "react-router-dom";
 
-
+function takeMeToRegister(){
+  window.location.href('/');
+}
 
 function Volunteer() {
   return (
-   
-    <div className="container"><Router>
+
+    <div className="container">
       <div className="container">
         <h1>Become a Volunteer</h1>
         <h5>We provide our volunteers the opportunity to grow through selfless action. You can contribute in any of the below ways –
@@ -44,7 +46,7 @@ function Volunteer() {
           abc@gamil.com with your resume mentioning what type of volunteering opportunities you are looking for. Keep the subject line as “Volunteer: name,skillset”.</p>
         <h6> Happy Volunteering ?</h6>
       </div>
-    
+
       <div className="container">
         <Carousel fade>
           <Carousel.Item>
@@ -79,72 +81,12 @@ function Volunteer() {
           </Carousel.Item>
         </Carousel>
       </div>
-     
       <div className="container">
-        <Row><Col>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img className="imagecss" variant="top" src={logo193} />
-            <Card.Body>
-              <Card.Title>POST HOMEMAKER THINGS</Card.Title>
-              <Card.Text>
-                If you are a Homemaker, be our Society representative and help us organize drives at your society
-              </Card.Text>
-              <Button variant="primary">ADD</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col>
-          <Card style={{ width: '18rem' }}>
-            <Card.Img className="imagecss" variant="top" src={logo193} />
-            <Card.Body>
-              <Card.Title>POST HOMEMAKER THINGS</Card.Title>
-              <Card.Text>
-                If you are a Homemaker, be our Society representative and help us organize drives at your society
-              </Card.Text>
-              <Button variant="primary">ADD</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img className="imagecss" variant="top" src={logo192} />
-              <Card.Body>
-                <Card.Title>POST PHOTOGRAPH</Card.Title>
-                <Card.Text>
-                  If you are a photographer, you can make our special kids happy. They sooooooo love posing and getting clicked.
-                  .................................
-             
-               
-                </Card.Text>
-                <Button variant="primary">ADD</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img className="imagecss" variant="top" src={logo194} />
-              <Card.Body>
-                <Card.Title>POST ANIMATION</Card.Title>
-                <Card.Text>
-                  If you are creative and good at animations, you can make small animated videos that motivate people to donate for the cause.
-                
-                </Card.Text>
-                
-                <Button variant="primary" >ADD</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+      <center><Button style={{"margin":"20px"}} variant="outline-success"> <a href="http://localhost:3000/Volreg">REGISTER NOW</a></Button></center>
       </div>
       <div>
-        <Switch>
-          <Route path="/RequestMsg">
-            <RequestMsg />
-          </Route>
-        </Switch>
       </div>
-    </Router>
-  </div>
+    </div>
   )
 }
 

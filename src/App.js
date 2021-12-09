@@ -19,6 +19,7 @@ import NGORegistartion from './NGORegistration';
 import NGODash from './VolNgo/NGODash';
 import DonorRegistartion from './DonorRegistration';
 import VOLRegistraion from './VOLRegistration';
+import Volunteer from './VolNgo/volunteer';
 const App=() =>{
   return (
     <Router>
@@ -46,6 +47,9 @@ const App=() =>{
         </Route>
         <Route path="/VolReg">
           <VOLRegistraion />
+        </Route>
+        <Route path="/why-volunteer">
+          <Volunteer />
         </Route>
         <Route component={NotFound} />
       </Switch>
