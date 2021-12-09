@@ -1,0 +1,207 @@
+.App {
+  text-align: center;
+}
+.box{
+  align-items: center;
+  text-align: center;
+
+}
+
+.myform{
+  margin-top: 50px;
+  padding: 50px;
+  border: 1px solid black;
+  align-self: center;
+  align-items: center;
+  border-radius: 40px;
+
+}
+
+.fbt{
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 20px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.span{
+  color:blue;  
+}
+.lable{
+  text-decoration: crimson;
+  float: left;
+
+}
+.navbar{
+  min-height: 80px;
+}
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.heading{
+  float: left;
+}
+_________________________
+.App{
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding :0;
+}
+.button{
+  background-color: #021E39;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 8%;
+}
+.formMarginBot{
+  margin-bottom: 40px;
+}
+.button:hover{
+  cursor: pointer;
+}
+.Navbarr{
+  background-color: #021E39;
+  width: 100%;
+  height: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+} 
+.Navbarr .leftSide{
+  flex: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.Navbarr .leftSide .links{
+  max-height: 80px;
+}
+
+.Navbarr .leftSide button{
+  margin-left: 20px;
+  display:none;
+}
+
+.Navbarr .leftSide #hidden{
+  display:flex;
+
+}
+
+
+.Navbarr .leftSide .links .link {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.Navbarr .rightSide{
+  flex: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.Navbarr .rightSide .links{
+  max-height: 80px;
+}
+.Navbarr .rightSide .links .link{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+.Sidebarr{
+  background-color: green;
+  width: 18%;
+  height: 95vh;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+} 
+
+@media only screen and (max-width: 880px){
+  .Navbarr .leftSide .links{
+    font-size: 20px;
+  }
+  .Sidebarr{
+    background-color: green;
+    width: 25vw;
+    height: 95vh;
+  }
+}
+@media only screen and (max-width: 790px){
+
+  .Navbarr .leftSide button{
+    display:flex;
+  }
+  .Navbarr .leftSide .links{
+    display: none;
+  }
+  .Navbarr .leftSide #hidden{
+    position: absolute;
+    left: -2vh;
+    top: 3.7%;
+    height: 27vh;
+    max-height: 27vh;
+    width: 100%;
+    background-color: #021E39;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+  }
+  .Navbarr .leftSide #hidden {
+    margin: 10px;
+    font-size: 25px;
+  }
+  
+
+}
+

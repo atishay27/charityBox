@@ -1,0 +1,13 @@
+[
+    { 
+      "name": "PESU FOOD COUPON", 
+      "business": "Pesu Food Canteen (Top Floor)", 
+      "prefix": "CBPESUFC",             
+      "minOrdVal": 100, 
+      "maxDisc": 150, 
+      "pDisc": 20,            
+      "expFrom": "16-11-2021",
+      "expUpto": "16-12-2021",
+      "points": 100
+    }
+  ]

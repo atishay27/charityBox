@@ -1,0 +1,16 @@
+.headBtn{
+    color: white;
+    background-color: #212529;
+    border: none;
+    float: right;
+}
+.btnNav{
+    float: right;
+    padding-top: 6px;
+    margin-left: 750px;
+    text-align: right;
+}
+.myUl{
+    margin-right: 0px;
+    width: 100%;
+}

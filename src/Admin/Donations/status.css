@@ -1,0 +1,31 @@
+.alCentre{
+    text-align: center;
+    color: black;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.myHead{
+    margin-top:10px;
+    background-color: beige;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.myCont{
+    border: 1px solid black;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+.site-card-border-less-wrapper {
+    padding: 30px;
+    background: #ececec;
+    width: 98%;
+}
+.topMargin{
+    margin-top: 20px;
+
+}

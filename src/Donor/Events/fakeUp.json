@@ -1,0 +1,12 @@
+[
+    { 
+    "name": "PESU RR Donation Drive", 
+    "city": "Bengaluru", 
+    "area": "BSK 3rd Stage",             
+    "startDate": "25-11-2021", 
+    "startTime": "12:00", 
+    "endTime": "18:00",            
+    "address": "100 Feet Ring Road, Banashankari Stage III, Dwaraka Nagar, Banashankari, Bengaluru, Karnataka 560085",
+    "volunteer": ["Rohan","Arjun"]
+  }
+]

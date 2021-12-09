@@ -1,0 +1,22 @@
+[
+  { 
+    "name": "PESU RR Donation Drive", 
+    "city": "Bengaluru", 
+    "area": "BSK 3rd Stage",             
+    "startDate": "16-11-2021", 
+    "startTime": "13:00", 
+    "endTime": "15:00",            
+    "address": "100 Feet Ring Road, Banashankari Stage III, Dwaraka Nagar, Banashankari, Bengaluru, Karnataka 560085",
+    "volunteer": ["Varun","Vijay"]
+  },
+  { 
+    "name": "PESU EC Donation Drive", 
+    "city": "Bengaluru", 
+    "area": "Electronic City",             
+    "startDate": "17-11-2021", 
+    "startTime": "14:00", 
+    "endTime": "16:00",            
+    "address": "Hosur Rd, Konappana Agrahara, Electronic City, Bengaluru, Karnataka 560100",
+    "volunteer": ["Diksha","Nandini"]
+  }
+]

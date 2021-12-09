@@ -1,0 +1,22 @@
+[
+    { 
+      "name": "Smile Foundation", 
+      "type": "Non-Governmental Organization", 
+      "founded": 2002,             
+      "founder": "Santanu Mishra", 
+      "email": "info@smilefoundationindia.org", 
+      "workArea": "We work on Education, Healthcare, Livelihood, Women Empowerment and Disaster response.",            
+      "website": "www.smilefoundationindia.org",
+      "address": "161 B/4, 3rd Floor, Gulmohar House, Yusuf Sarai Community Centre, New Delhi – 110049"
+    },
+    { 
+        "name": "Nanhi Kali", 
+        "type": "Non-Governmental Organization", 
+        "founded": 1996,             
+        "founder": "Anand Mahindra", 
+        "email": "support@nanhikali.org", 
+        "workArea": "Designed to help girls from low-income families complete ten years of formal schooling",            
+        "website": "www.nanhikali.org",
+        "address": "K. C. Mahindra Education Trust Cecil Court Near Regal Cinema Mahakavi Bhushan Marg Mumbai 400001"
+    }
+  ]

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Give India Foundation",
+    "email": "info@smilefoundationindia.org",
+    "requested": 200,
+    "received": 150,
+    "pending": 50
+  },
+  {
+    "name": "Goonj",
+    "email": "mail@goonj.org",
+    "requested": 300,
+    "received": 200,
+    "pending": 100
+  },
+  {
+    "name": "Goonj",
+    "email": "mail@goonj.org",
+    "requested": 300,
+    "received": 200,
+    "pending": 100,
+    "address": "xyz",
+    "website": "xyz"
+  }
+  
+]
