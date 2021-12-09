@@ -17,6 +17,8 @@ import VOLDash from './VolNgo/VOLDash';
 import DonorDash from './Donor/Donordash';
 import NGORegistartion from './NGORegistration';
 import NGODash from './VolNgo/NGODash';
+import DonorRegistartion from './DonorRegistration';
+import VOLRegistraion from './VOLRegistration';
 const App=() =>{
   return (
     <Router>
@@ -39,30 +41,15 @@ const App=() =>{
         <Route path="/NGOReg">
           <NGORegistartion />
         </Route>
+        <Route path="/DonorReg">
+          <DonorRegistartion />
+        </Route>
+        <Route path="/VolReg">
+          <VOLRegistraion />
+        </Route>
         <Route component={NotFound} />
       </Switch>
     </Router>
   )
 }
 export default App;
-
-/*import firebase from "./firebase";
-function App() { 
-
-  React.useEffect(()=>{
-    const msg=firebase.messaging();
-    msg.requestPermission().then(()=>{
-      return msg.getToken();                                
-    }).then(token=>{
-      console.log('Token:',token)
-    }).catch(()=>{
-      console.log('error');
-    })
-  })
-  return (
-    <div >
-    </div>
-  );
-}
-
-export default App;*/
