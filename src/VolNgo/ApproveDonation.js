@@ -55,10 +55,12 @@ const ApproveDonation = ({ user }) => {
             draggable: true,
             progress: undefined,
         });
+        setData([]);
         Fetchdata2();
         setIsModalVisible(false);
     }
     useEffect(() => {
+        setData([]);
         if (load) {
             Fetchdata();
         }
@@ -72,6 +74,7 @@ const ApproveDonation = ({ user }) => {
     }, [info])
     const Fetchdata = () => {
         setInfo([]);
+        setData([]);
         projectFirestore.collection("events").where('volunteer', 'array-contains', user).get().then((querySnapshot) => {
             querySnapshot.forEach(element => {
                 var id = element.id;
@@ -84,6 +87,7 @@ const ApproveDonation = ({ user }) => {
         console.log("INFO: ", info);
         setData([]);
         projectFirestore.collection("pendingDonations").where('eventID', 'in', info).get().then((querySnapshot) => {
+            setData([]);
             querySnapshot.forEach(element => {
                 var id = element.id;
                 var data = element.data();
@@ -112,7 +116,7 @@ const ApproveDonation = ({ user }) => {
                         },
                         {
                             icon: () => <DeleteOutline />,
-                            tooltip: 'Delete Coupon',
+                            tooltip: 'Delete Donation',
                             onClick: (event, rowData) => {
                                 projectFirestore.collection("pendingDonations").doc(rowData.id).delete();
                                 toast.success('DONATION DELETED!!!', {

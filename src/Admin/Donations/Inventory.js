@@ -7,8 +7,9 @@ import { useEffect, useState } from "react";
 import { Modal } from 'antd';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+const { Meta } = Card;
 const Inventory = () => {
+    
     const [load, setLoad] = useState(true);
     const [received, setReceived] = useState(0);
     const [disbursed, setDisbursed] = useState(0);
@@ -53,11 +54,11 @@ const Inventory = () => {
         setIsModalVisible(false);
         projectFirestore.collection("inventory").doc("RECEIVED").update({
             target: parseInt(newReceivedTarget)
-          });
-          projectFirestore.collection("inventory").doc("DISBURSED").update({
+        });
+        projectFirestore.collection("inventory").doc("DISBURSED").update({
             target: parseInt(newDisbursedTarget)
-          });
-          toast.success('TARGET UPDATED!!!', {
+        });
+        toast.success('TARGET UPDATED!!!', {
             position: "top-center",
             autoClose: 3000,
             hideProgressBar: false,
@@ -65,8 +66,8 @@ const Inventory = () => {
             pauseOnHover: false,
             draggable: true,
             progress: undefined,
-          });
-          Fetchdata();
+        });
+        Fetchdata();
 
     };
     return (
@@ -77,16 +78,25 @@ const Inventory = () => {
                         <Col span={8}>
                             <Card title="CLOTHES RECEIVED" className="alCentre" bordered={false} style={{ width: 300 }}>
                                 <Progress size="large" type="dashboard" format={() => `${received}`} percent={parseInt(((received / receivedTarget) * 100))} />
+                                <Meta
+                                    description={"TARGET: "+receivedTarget}
+                                />
                             </Card>
                         </Col>
                         <Col span={8}>
                             <Card title="CLOTHES DISBURSED" className="alCentre" bordered={false} style={{ width: 300 }}>
                                 <Progress size="large" type="dashboard" format={() => `${disbursed}`} percent={parseInt(((disbursed / disbursedTarget) * 100))} />
+                                <Meta
+                                    description={"TARGET: "+disbursedTarget}
+                                />
                             </Card>
                         </Col>
                         <Col span={8}>
                             <Card title="CLOTHES AVAILABLE" className="alCentre" bordered={false} style={{ width: 300 }}>
                                 <Progress size="large" type="dashboard" format={() => `${received - disbursed}`} percent={parseInt(((received - disbursed) / received) * 100)} />
+                                <Meta
+                                    description={"TARGET: "+received}
+                                />
                             </Card>
                         </Col>
                     </Row>
@@ -95,7 +105,7 @@ const Inventory = () => {
             <div className="row mt-4">
                 <div className="col-5" />
                 <div className="col-2">
-                <button className="btn btn-primary" onClick={showModal}>UPDATE TARGETS</button>
+                    <button className="btn btn-primary" onClick={showModal}>UPDATE TARGETS</button>
                 </div>
                 <div className="col-5" />
             </div>
@@ -106,11 +116,11 @@ const Inventory = () => {
                         <div className="col-8">
                             <form className="myform">
                                 <div className="form-outline mb-4">
-                                    <input type="number" required className="form-control" value={newReceivedTarget} onChange={(e) => { setNewReceivedTarget(e.target.value) }}/>
+                                    <input type="number" required className="form-control" value={newReceivedTarget} onChange={(e) => { setNewReceivedTarget(e.target.value) }} />
                                     <span><i><center>RECEIVED TARGET</center></i></span>
                                 </div>
                                 <div className="form-outline mb-4">
-                                    <input type="number" required className="form-control" value={newDisbursedTarget} onChange={(e) => { setNewDisbursedTarget(e.target.value) }}/>
+                                    <input type="number" required className="form-control" value={newDisbursedTarget} onChange={(e) => { setNewDisbursedTarget(e.target.value) }} />
                                     <span><i><center>DISBURSED TARGET</center></i></span>
                                 </div>
                             </form>
@@ -120,16 +130,16 @@ const Inventory = () => {
                 </div>
             </Modal>
             <ToastContainer
-        position="top-center"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss={false}
-        draggable
-        pauseOnHover={false}
-      />
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover={false}
+            />
         </div>
     )
 }

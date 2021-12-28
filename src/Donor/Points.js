@@ -31,7 +31,8 @@ const Points = () => {
           querySnapshot.forEach(element => {
             var id = element.id;
             var data = element.data();
-            setCouponVal(data.points)
+            //setCouponVal(data.points)
+            // console.log("Coupncal",couponVal)
 
             data.id = id;
             if (data['valid_from'] && data['valid_upto']) {
@@ -57,6 +58,20 @@ const Points = () => {
           console.log(oldData,"OLD DATA")
         setIsModalVisible(true);
         setOldData(oldData);
+        setCouponVal(oldData.points)
+        console.log("Coupnval",couponVal)
+
+        projectFirestore.collection("coupons").where('prefix','==',oldData.prefix).get().then((querySnapshot) => {
+            console.log("inside dv",oldData.prefix)
+            querySnapshot.forEach(element => {
+              var id = element.id;
+            //   var data = element.data();
+            console.log("points",oldData.points)
+                          })
+        })
+    
+
+
     };
     const handleOk = () => {
         let couponsOld=[];
@@ -68,12 +83,26 @@ const Points = () => {
                 const newVolunteer = {};
                 var data = element.data()
                 console.log("user",userID)
-                if(data.coupons)
-                couponsOld=data.coupons
+                
+                if(data['coupon-code'])
+                couponsOld=data['coupon-code']
+                if(couponsOld.includes(oldData.prefix)){
+                    toast.success('Coupon Already Redeemed Try Another One', {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                        progress: undefined,
+                      });
+                      return
+                }
+                console.log("Coupons Old",couponsOld)
                  if(data.points>=couponVal){
                      console.log("yes value greater ")
                      var newPoints= parseInt(data.points) - parseInt(couponVal)
-                     projectFirestore.collection("users").doc(userID).update({
+                     projectFirestore.collection("users").doc(userID).update({ 
                         "coupon-code":[oldData.prefix,...couponsOld],
                         "points": newPoints
                     })

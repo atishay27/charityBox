@@ -60,7 +60,7 @@ const Status = () => {
             pauseOnHover: false,
             draggable: true,
             progress: undefined,
-          });
+        });
         Fetchdata();
     };
     const Fetchdata = () => {
@@ -146,6 +146,9 @@ const Status = () => {
                             <div className="card-body">
                                 <h5 className="card-title">TOTAL DONOR'S</h5>
                             </div>
+                            <div className="card-footer text-muted">
+                                TARGET: {donorsTarget}
+                            </div>
                         </div>
                     </div>
                     <div className="col-4">
@@ -154,6 +157,9 @@ const Status = () => {
                             <div className="card-body">
                                 <h5 className="card-title">CLOTHES RECEIVED</h5>
                             </div>
+                            <div className="card-footer text-muted">
+                                TARGET: {clothesTarget}
+                            </div>
                         </div>
                     </div>
                     <div className="col-4">
@@ -161,6 +167,9 @@ const Status = () => {
                             <Progress size="large" type="dashboard" format={() => `${thisMonthEventsConducted}`} percent={parseInt((thisMonthEventsConducted / eventsTarget) * 100)} />
                             <div className="card-body">
                                 <h5 className="card-title">EVENT'S CONDUCTED</h5>
+                            </div>
+                            <div className="card-footer text-muted">
+                                TARGET: {eventsTarget}
                             </div>
                         </div>
                     </div>
@@ -179,6 +188,9 @@ const Status = () => {
                             <div className="card-body">
                                 <h5 className="card-title">TOTAL DONOR'S</h5>
                             </div>
+                            <div className="card-footer text-muted">
+                                TARGET: {donorsTarget}
+                            </div>
                         </div>
                     </div>
                     <div className="col-4">
@@ -187,6 +199,9 @@ const Status = () => {
                             <div className="card-body">
                                 <h5 className="card-title">CLOTHES RECEIVED</h5>
                             </div>
+                            <div className="card-footer text-muted">
+                                TARGET: {clothesTarget}
+                            </div>
                         </div>
                     </div>
                     <div className="col-4">
@@ -194,6 +209,9 @@ const Status = () => {
                             <Progress size="large" type="dashboard" format={() => `${prevMonthEventsConducted}`} percent={parseInt((prevMonthEventsConducted / eventsTarget) * 100)} />
                             <div className="card-body">
                                 <h5 className="card-title">EVENT'S CONDUCTED</h5>
+                            </div>
+                            <div className="card-footer text-muted">
+                                TARGET: {eventsTarget}
                             </div>
                         </div>
                     </div>

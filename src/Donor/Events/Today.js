@@ -120,7 +120,7 @@ const Today = () => {
                 draggable
                 pauseOnHover={false}
             />
-            <Modal title="Dispatch Details" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={1000}>
+            <Modal title="Donation Details" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} width={1000}>
                 <div className="container">
                     <div className="row">
                         <div className="col-2" />
